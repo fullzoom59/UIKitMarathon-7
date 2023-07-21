@@ -33,7 +33,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let height = 270 - scrollView.contentOffset.y
         imageView.frame = CGRect(x: 0, y: scrollView.contentOffset.y, width: UIScreen.main.bounds.size.width, height: height)
-        print(height)
+        
         let topInset = max(height, imageHeight) - view.safeAreaInsets.top
         scrollView.verticalScrollIndicatorInsets = .init(top: topInset, left: 0, bottom: 0, right: 0)
     }
